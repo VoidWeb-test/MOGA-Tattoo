@@ -460,6 +460,14 @@
       color: var(--white);
     }
 
+    /* Képek reszponzív illeszkedése a kártyákba */
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     /* ─── CONTACT ─────────────────────────────────────── */
     .contact__grid {
       display: grid;
@@ -665,7 +673,6 @@
 </head>
 <body>
 
-  <!-- ═══════════════ NAVBAR ════════════════════════════ -->
   <nav class="nav" id="nav">
     <div class="container">
       <div class="nav__inner">
@@ -691,13 +698,11 @@
     </div>
   </nav>
 
-  <!-- ═══════════════ HERO ══════════════════════════════ -->
   <section class="hero" id="home">
     <div class="container">
       <div class="hero__grid">
-        <!-- Left -->
         <div>
-          <div class="hero__badge">Szentgotthárd &middot; Exkluzív Stúdió</div>
+          <div class="hero__badge">Szentgotthárd · Exkluzív Stúdió</div>
           <h1 class="hero__title">
             Történetek<br>a <span class="gold">bőrödbe</span><br>vésve.
           </h1>
@@ -710,7 +715,6 @@
           </div>
         </div>
 
-        <!-- Right: Logo Orb -->
         <div class="hero__orb-wrap">
           <div class="hero__orb">
             <img src="image_aea693.png" alt="MOGA Tattoo embléma"
@@ -721,7 +725,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════ PAIN POINTS ═══════════════════════ -->
   <section class="section pain" id="pain">
     <div class="container">
       <div class="pain__grid">
@@ -762,7 +765,6 @@
     </div>
   </section>
 
-  <!-- ═══════════════ SERVICES ══════════════════════════ -->
   <section class="section" id="services">
     <div class="container">
       <div class="services__intro">
@@ -806,11 +808,9 @@
     </div>
   </section>
 
-  <!-- ═══════════════ TRUST & GALLERY ═══════════════════ -->
   <section class="section trust" id="trust">
     <div class="container">
       <div class="trust__grid">
-        <!-- Left: Credentials -->
         <div>
           <span class="eyebrow">Miért bízhat bennünk</span>
           <h2>A minőség nem látható – csak érezhető.</h2>
@@ -839,22 +839,27 @@
           </div>
         </div>
 
-        <!-- Right: Gallery -->
         <div>
           <span class="eyebrow">Galériánkból</span>
           <div class="gallery__grid">
             <div class="gallery-cell">
-              <div class="gallery-cell__inner">✦</div>
+              <div class="gallery-cell__inner">
+                <img src="fineline-reszletek.jpg" alt="Fineline részletek" class="gallery-img">
+              </div>
               <div class="gallery-cell__overlay"></div>
               <div class="gallery-cell__label">Fineline részletek</div>
             </div>
             <div class="gallery-cell">
-              <div class="gallery-cell__inner">◈</div>
+              <div class="gallery-cell__inner">
+                <img src="realisztikus-arnyekolas.png" alt="Realisztikus árnyékolás" class="gallery-img">
+              </div>
               <div class="gallery-cell__overlay"></div>
               <div class="gallery-cell__label">Realisztikus árnyékolás</div>
             </div>
             <div class="gallery-cell">
-              <div class="gallery-cell__inner">❖</div>
+              <div class="gallery-cell__inner">
+                <img src="nagymeretu-projektek.png" alt="Nagyméretű projektek" class="gallery-img">
+              </div>
               <div class="gallery-cell__overlay"></div>
               <div class="gallery-cell__label">Nagyméretű projektek</div>
             </div>
@@ -867,12 +872,10 @@
     </div>
   </section>
 
-  <!-- ═══════════════ CONTACT ═══════════════════════════ -->
   <section class="section" id="contact">
     <div class="container">
       <div class="contact__grid">
 
-        <!-- Left: Info + Map -->
         <div class="contact__info">
           <span class="eyebrow">Kapcsolat & Helyszín</span>
           <h2>Kezdj egy beszélgetéssel.</h2>
@@ -904,7 +907,7 @@
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               title="MOGA Tattoo helye a térképen">
-            </iframe>
+            </table>
           </div>
           <a class="map-link"
              href="https://www.google.com/maps/place/MOGA+Tattoo/@46.9522698,16.2775421,19z/"
@@ -913,7 +916,6 @@
           </a>
         </div>
 
-        <!-- Right: Form -->
         <div class="form-card">
           <div class="form-title">Konzultációs kérelem</div>
           <p class="form-sub">Minden üzenetre 24 órán belül reagálunk. Első konzultáció ingyenes.</p>
@@ -935,97 +937,15 @@
                   <option>Fineline & Minimál</option>
                   <option>Realizmus & Portré</option>
                   <option>Egyedi Tervezés</option>
-                  <option>Cover-up & Takarás</option>
-                  <option>Nem vagyok biztos – konzultációt kérek</option>
+                  <option>Cover-up & </option>
                 </select>
               </div>
             </div>
-            <div class="form-group">
-              <label for="fidea">Elképzelés leírása</label>
-              <textarea id="fidea" name="idea" placeholder="Meséld el az ötletedet: helyszín a testen, méret, motívum, hangulat, referencia képek linkje…"></textarea>
-            </div>
-            <button type="submit" class="btn btn--gold btn--lg form-submit">
-              Elküldöm a kérelmet →
-            </button>
           </form>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════ FOOTER ════════════════════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <img src="image_aea693.png" alt="MOGA Tattoo" class="footer__logo"
-               onerror="this.style.display='none'" />
-          <span class="footer__name">MOGA Tattoo</span>
-        </div>
-        <span class="footer__tagline">Szentgotthárd · Exkluzív Stúdió</span>
-        <span class="footer__copy">© 2026 MOGA Tattoo. Minden jog fenntartva.</span>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Sticky nav on scroll
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    // Hamburger mobile nav
-    const hamburger = document.getElementById('hamburger');
-    hamburger.addEventListener('click', () => {
-      const links = document.querySelector('.nav__links');
-      const open = links.style.display === 'flex';
-      Object.assign(links.style, open
-        ? { display: 'none' }
-        : {
-            display: 'flex',
-            flexDirection: 'column',
-            position: 'absolute',
-            top: '72px',
-            left: '0',
-            right: '0',
-            background: 'rgba(10,10,10,0.97)',
-            padding: '24px 28px',
-            gap: '20px',
-            borderTop: '1px solid rgba(212,175,55,0.15)',
-            backdropFilter: 'blur(16px)'
-          }
-      );
-    });
-
-    // Form submit handler
-    function handleSubmit(e) {
-      e.preventDefault();
-      const btn = e.target.querySelector('.form-submit');
-      btn.textContent = '✦ Elküldve! Hamarosan keresünk.';
-      btn.style.background = '#2a6b3c';
-      btn.style.color = '#fff';
-      btn.disabled = true;
-    }
-
-    // Scroll-reveal: fade up cards
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.08 });
-
-    document.querySelectorAll('.svc-card, .pain__card, .trust__item, .gallery-cell').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(22px)';
-      el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
-      observer.observe(el);
-    });
-  </script>
 </body>
 </html>
